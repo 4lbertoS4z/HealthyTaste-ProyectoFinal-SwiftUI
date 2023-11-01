@@ -6,7 +6,7 @@ struct FirstDishListView: View {
     @StateObject private var firstDishViewModel = FirstDishViewModel()
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             List(firstDishViewModel.firstDishs ?? []){ firstDish in
                 NavigationLink(
                     destination: FirstDishDetailView(first: firstDish),

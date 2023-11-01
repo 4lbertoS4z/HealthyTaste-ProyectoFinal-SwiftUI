@@ -7,7 +7,7 @@ struct SecondDishListView: View {
     secondDishViewModel = SecondDishViewModel()
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             List(secondDishViewModel.secondDishs ?? []){ secondDish in
                 NavigationLink(
                     destination: SecondDishDetailView(second: secondDish),

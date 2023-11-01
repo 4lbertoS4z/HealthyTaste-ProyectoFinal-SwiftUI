@@ -5,7 +5,7 @@ import SwiftUI
 struct DessertDishListView: View {
     @StateObject private var dessertDishViewModel = DessertDishViewModel()
     var body: some View {
-            NavigationView{
+            NavigationStack{
                 List(dessertDishViewModel.dessertDishs ?? []){ dessertDish in
                     NavigationLink(
                         destination: DessertDishDetailView(dessert: dessertDish),
