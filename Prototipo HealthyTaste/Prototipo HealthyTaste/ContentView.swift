@@ -3,9 +3,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var coordinator: Coordinator
+    
     var body: some View {
         TabView {
-            FirstDishListView()
+            coordinator.makeFirstDishView()
                 .tabItem {
                     Label("Entrantes", systemImage: "fork.knife")
                 }
