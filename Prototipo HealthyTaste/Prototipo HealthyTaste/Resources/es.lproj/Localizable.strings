@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Prototipo HealthyTaste
+
+  Created by alberto saz on 9/11/23.
+  
+*/
+
+"First Dish" = "Entrantes";
+"Second Dish" = "Segundos";
+"Desserts" = "Postres";
+"Recipe Detail" = "Detalle de la Receta";

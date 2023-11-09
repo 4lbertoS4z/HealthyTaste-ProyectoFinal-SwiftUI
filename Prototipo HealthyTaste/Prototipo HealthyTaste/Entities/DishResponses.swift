@@ -1,26 +1,26 @@
 import Foundation
 
 // MARK: - DishResponses
-struct DishResponses: Decodable {
+struct DishResponses: Codable {
     let first: [First]
     let seconds: [Second]
     let desserts: [Dessert]
 }
 
 // MARK: - First
-struct First: Decodable, Identifiable {
+struct First: Codable, Identifiable {
     let details: Details
     let id: Int
     let image: String
     let name: String
 }
-struct Second:Decodable, Identifiable{
+struct Second:Codable, Identifiable{
     let details: Details
     let id: Int
     let image: String
     let name: String
 }
-struct Dessert: Decodable, Identifiable{
+struct Dessert: Codable, Identifiable{
     let details: Details
     let id: Int
     let image: String
@@ -28,7 +28,7 @@ struct Dessert: Decodable, Identifiable{
 }
 
 // MARK: - Details
-struct Details: Decodable {
+struct Details: Codable {
     let elaboration: String
     let imgAllergies: String
     let ingredients: [String]

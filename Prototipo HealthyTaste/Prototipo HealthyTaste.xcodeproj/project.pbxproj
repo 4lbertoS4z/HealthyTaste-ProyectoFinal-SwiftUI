@@ -26,12 +26,19 @@
 		60C296742AF0504900C1A45C /* DessertDishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C296732AF0504900C1A45C /* DessertDishListView.swift */; };
 		60C2A6892AFBA1CE004D6E2A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2A6882AFBA1CE004D6E2A /* Coordinator.swift */; };
 		60C2A68F2AFBA365004D6E2A /* FirstDishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2A68E2AFBA365004D6E2A /* FirstDishDetailView.swift */; };
-		60C2A6942AFBA40C004D6E2A /* FirstDishService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2A6932AFBA40C004D6E2A /* FirstDishService.swift */; };
-		60C2A6962AFBA41E004D6E2A /* LiveFirstDishService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2A6952AFBA41E004D6E2A /* LiveFirstDishService.swift */; };
+		60C2A6942AFBA40C004D6E2A /* FirstDishRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2A6932AFBA40C004D6E2A /* FirstDishRemoteService.swift */; };
+		60C2A6962AFBA41E004D6E2A /* LiveFirstDishRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2A6952AFBA41E004D6E2A /* LiveFirstDishRemoteService.swift */; };
 		60C2A6982AFBA4ED004D6E2A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2A6972AFBA4ED004D6E2A /* NetworkClient.swift */; };
 		60C2A69A2AFBA4F9004D6E2A /* NetworkClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2A6992AFBA4F9004D6E2A /* NetworkClientError.swift */; };
 		60C2A69C2AFBA50F004D6E2A /* URLSessionNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2A69B2AFBA50F004D6E2A /* URLSessionNetworkClient.swift */; };
-		60C2A69E2AFBA91D004D6E2A /* MockFirstDishService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2A69D2AFBA91D004D6E2A /* MockFirstDishService.swift */; };
+		60C2A69E2AFBA91D004D6E2A /* MockFirstDishRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2A69D2AFBA91D004D6E2A /* MockFirstDishRemoteService.swift */; };
+		60E155E32AFCF97800F15EB8 /* FirstDishLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E155E22AFCF97800F15EB8 /* FirstDishLocalService.swift */; };
+		60E155E52AFCF9E500F15EB8 /* UserDefaultsFirstDishLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E155E42AFCF9E500F15EB8 /* UserDefaultsFirstDishLocalService.swift */; };
+		60E155E72AFCFB2E00F15EB8 /* MockFirstDishLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E155E62AFCFB2E00F15EB8 /* MockFirstDishLocalService.swift */; };
+		60E155E92AFCFBD900F15EB8 /* FirstDishRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E155E82AFCFBD900F15EB8 /* FirstDishRepository.swift */; };
+		60E155EC2AFCFF7700F15EB8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 60E155EB2AFCFF7700F15EB8 /* Kingfisher */; };
+		60E155EF2AFCFFA900F15EB8 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E155EE2AFCFFA900F15EB8 /* RemoteImage.swift */; };
+		60E155F32AFD033700F15EB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60E155F52AFD033700F15EB8 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,12 +62,19 @@
 		60C296732AF0504900C1A45C /* DessertDishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDishListView.swift; sourceTree = "<group>"; };
 		60C2A6882AFBA1CE004D6E2A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		60C2A68E2AFBA365004D6E2A /* FirstDishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDishDetailView.swift; sourceTree = "<group>"; };
-		60C2A6932AFBA40C004D6E2A /* FirstDishService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDishService.swift; sourceTree = "<group>"; };
-		60C2A6952AFBA41E004D6E2A /* LiveFirstDishService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveFirstDishService.swift; sourceTree = "<group>"; };
+		60C2A6932AFBA40C004D6E2A /* FirstDishRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDishRemoteService.swift; sourceTree = "<group>"; };
+		60C2A6952AFBA41E004D6E2A /* LiveFirstDishRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveFirstDishRemoteService.swift; sourceTree = "<group>"; };
 		60C2A6972AFBA4ED004D6E2A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		60C2A6992AFBA4F9004D6E2A /* NetworkClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientError.swift; sourceTree = "<group>"; };
 		60C2A69B2AFBA50F004D6E2A /* URLSessionNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkClient.swift; sourceTree = "<group>"; };
-		60C2A69D2AFBA91D004D6E2A /* MockFirstDishService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirstDishService.swift; sourceTree = "<group>"; };
+		60C2A69D2AFBA91D004D6E2A /* MockFirstDishRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirstDishRemoteService.swift; sourceTree = "<group>"; };
+		60E155E22AFCF97800F15EB8 /* FirstDishLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDishLocalService.swift; sourceTree = "<group>"; };
+		60E155E42AFCF9E500F15EB8 /* UserDefaultsFirstDishLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsFirstDishLocalService.swift; sourceTree = "<group>"; };
+		60E155E62AFCFB2E00F15EB8 /* MockFirstDishLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirstDishLocalService.swift; sourceTree = "<group>"; };
+		60E155E82AFCFBD900F15EB8 /* FirstDishRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDishRepository.swift; sourceTree = "<group>"; };
+		60E155EE2AFCFFA900F15EB8 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		60E155F42AFD033700F15EB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		60E155F62AFD033800F15EB8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60E155EC2AFCFF7700F15EB8 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +108,8 @@
 		60C296562AF04CB600C1A45C /* Prototipo HealthyTaste */ = {
 			isa = PBXGroup;
 			children = (
+				60E155F02AFD031100F15EB8 /* Resources */,
+				60E155ED2AFCFF9600F15EB8 /* Components */,
 				60C2A68B2AFBA2CB004D6E2A /* NetworkClient */,
 				60C2A68A2AFBA2C3004D6E2A /* Data */,
 				60C2A6832AFBA0E4004D6E2A /* Features */,
@@ -228,6 +245,7 @@
 		60C2A6912AFBA3E4004D6E2A /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				60E155E82AFCFBD900F15EB8 /* FirstDishRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -235,11 +253,46 @@
 		60C2A6922AFBA3F1004D6E2A /* FirstDish */ = {
 			isa = PBXGroup;
 			children = (
-				60C2A6932AFBA40C004D6E2A /* FirstDishService.swift */,
-				60C2A6952AFBA41E004D6E2A /* LiveFirstDishService.swift */,
-				60C2A69D2AFBA91D004D6E2A /* MockFirstDishService.swift */,
+				60E155E12AFCF95A00F15EB8 /* Local */,
+				60E155E02AFCF94400F15EB8 /* Remote */,
 			);
 			path = FirstDish;
+			sourceTree = "<group>";
+		};
+		60E155E02AFCF94400F15EB8 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				60C2A6932AFBA40C004D6E2A /* FirstDishRemoteService.swift */,
+				60C2A6952AFBA41E004D6E2A /* LiveFirstDishRemoteService.swift */,
+				60C2A69D2AFBA91D004D6E2A /* MockFirstDishRemoteService.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		60E155E12AFCF95A00F15EB8 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				60E155E22AFCF97800F15EB8 /* FirstDishLocalService.swift */,
+				60E155E42AFCF9E500F15EB8 /* UserDefaultsFirstDishLocalService.swift */,
+				60E155E62AFCFB2E00F15EB8 /* MockFirstDishLocalService.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		60E155ED2AFCFF9600F15EB8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				60E155EE2AFCFFA900F15EB8 /* RemoteImage.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		60E155F02AFD031100F15EB8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60E155F52AFD033700F15EB8 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +311,9 @@
 			dependencies = (
 			);
 			name = "Prototipo HealthyTaste";
+			packageProductDependencies = (
+				60E155EB2AFCFF7700F15EB8 /* Kingfisher */,
+			);
 			productName = "Prototipo HealthyTaste";
 			productReference = 60C296542AF04CB600C1A45C /* Prototipo HealthyTaste.app */;
 			productType = "com.apple.product-type.application";
@@ -284,8 +340,12 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 60C2964B2AF04CB600C1A45C;
+			packageReferences = (
+				60E155EA2AFCFF7700F15EB8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 60C296552AF04CB600C1A45C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -301,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60C2965F2AF04CB800C1A45C /* Preview Assets.xcassets in Resources */,
+				60E155F32AFD033700F15EB8 /* Localizable.strings in Resources */,
 				60C2965C2AF04CB800C1A45C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,12 +377,15 @@
 				602D0A702AF06C8000F7E6FA /* FirstDishRowView.swift in Sources */,
 				60C2965A2AF04CB600C1A45C /* ContentView.swift in Sources */,
 				60C296582AF04CB600C1A45C /* Prototipo_HealthyTasteApp.swift in Sources */,
+				60E155E72AFCFB2E00F15EB8 /* MockFirstDishLocalService.swift in Sources */,
+				60E155E92AFCFBD900F15EB8 /* FirstDishRepository.swift in Sources */,
 				601BE9C52AF25F920048C960 /* SecondDishViewModel.swift in Sources */,
 				60C2A69A2AFBA4F9004D6E2A /* NetworkClientError.swift in Sources */,
-				60C2A6962AFBA41E004D6E2A /* LiveFirstDishService.swift in Sources */,
-				60C2A69E2AFBA91D004D6E2A /* MockFirstDishService.swift in Sources */,
-				60C2A6942AFBA40C004D6E2A /* FirstDishService.swift in Sources */,
+				60C2A6962AFBA41E004D6E2A /* LiveFirstDishRemoteService.swift in Sources */,
+				60C2A69E2AFBA91D004D6E2A /* MockFirstDishRemoteService.swift in Sources */,
+				60C2A6942AFBA40C004D6E2A /* FirstDishRemoteService.swift in Sources */,
 				60C296702AF04FD600C1A45C /* FirstDishViewModel.swift in Sources */,
+				60E155E32AFCF97800F15EB8 /* FirstDishLocalService.swift in Sources */,
 				609ED9712AF2D5430097638C /* WebView.swift in Sources */,
 				609ED96F2AF2D0330097638C /* KcalCalculatorWebView.swift in Sources */,
 				60C2A6982AFBA4ED004D6E2A /* NetworkClient.swift in Sources */,
@@ -332,6 +396,8 @@
 				60C2A69C2AFBA50F004D6E2A /* URLSessionNetworkClient.swift in Sources */,
 				601BE9CF2AF2626A0048C960 /* DessertDishDetailView.swift in Sources */,
 				60C296722AF0503300C1A45C /* SecondDishListView.swift in Sources */,
+				60E155EF2AFCFFA900F15EB8 /* RemoteImage.swift in Sources */,
+				60E155E52AFCF9E500F15EB8 /* UserDefaultsFirstDishLocalService.swift in Sources */,
 				60C2966A2AF04D3800C1A45C /* DishResponses.swift in Sources */,
 				601BE9C72AF25FA20048C960 /* DessertDishViewModel.swift in Sources */,
 				601BE9CD2AF262580048C960 /* SecondDishDetailView.swift in Sources */,
@@ -339,6 +405,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		60E155F52AFD033700F15EB8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60E155F42AFD033700F15EB8 /* en */,
+				60E155F62AFD033800F15EB8 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		60C296602AF04CB800C1A45C /* Debug */ = {
@@ -540,6 +618,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		60E155EA2AFCFF7700F15EB8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		60E155EB2AFCFF7700F15EB8 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60E155EA2AFCFF7700F15EB8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 60C2964C2AF04CB600C1A45C /* Project object */;
 }

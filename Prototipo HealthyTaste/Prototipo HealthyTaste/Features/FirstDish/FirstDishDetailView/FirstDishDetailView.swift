@@ -38,6 +38,7 @@ struct FirstDishDetailView: View {
                 
             }
         }
+        .navigationBarTitle("Recipe Detail", displayMode: .inline)
     }
 }
 

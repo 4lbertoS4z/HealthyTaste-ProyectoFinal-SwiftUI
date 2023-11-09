@@ -1,18 +1,18 @@
 import Foundation
 
 class FirstDishViewModel: ObservableObject {
-    private let fistDishService: FirstDishService
+    private let firstDishRepository: FirstDishRepository
     @Published private(set) var firstDishs = [First]()
     @Published var showErrorMessage = false
     
-    init(fistDishService: FirstDishService){
-        self.fistDishService = fistDishService
+    init(firstDishRepository: FirstDishRepository){
+        self.firstDishRepository = firstDishRepository
         
     }
     @MainActor
     func fetchFirstDish() async {
         do {
-            firstDishs = try await fistDishService.getFirstDishes()
+            firstDishs = try await firstDishRepository.getFirstDishes()
         } catch {
             showErrorMessage = true
         }

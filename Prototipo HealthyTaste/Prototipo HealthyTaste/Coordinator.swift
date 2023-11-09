@@ -9,18 +9,22 @@ import Foundation
 
 
 class Coordinator: ObservableObject{
-    private let firstDishService: FirstDishService
+    private let firstDishRepository: FirstDishRepository
     
     init(mock: Bool = false) {
         let netWorkClient = URLSessionNetworkClient()
-        self.firstDishService = mock ? MockFirstDishService(): LiveFirstDishService(networkClient: netWorkClient)
+        let firstDishRemoteService: FirstDishRemoteService = mock ? MockFirstDishRemoteService(): LiveFirstDishRemoteService(networkClient: netWorkClient)
+        let firstDishLocalService: FirstDishLocalService = mock ? MockFirstDishLocalService(): UserDefaultsFirstDishLocalService()
+        
+        firstDishRepository = FirstDishRepository(remoteService: firstDishRemoteService, localService: firstDishLocalService)
+        
     }
     // MARK: - FirstDishView
     func makeFirstDishView() -> FirstDishListView{
         FirstDishListView(firstDishViewModel: makeFirstDishViewViewModel())
     }
     private func makeFirstDishViewViewModel() -> FirstDishViewModel{
-        .init(fistDishService: firstDishService)
+        .init(firstDishRepository: firstDishRepository)
     }
     //MARK: - FirstDishDetailView
     func makeFirstDishDetailView(first: First) -> FirstDishDetailView{

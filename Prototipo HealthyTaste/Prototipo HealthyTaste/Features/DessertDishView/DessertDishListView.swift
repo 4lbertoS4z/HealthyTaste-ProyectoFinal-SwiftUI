@@ -33,7 +33,7 @@ struct DessertDishListView: View {
                         }
                         )
                 }
-                .navigationBarTitle("Dessert Dish")
+                .navigationBarTitle("Desserts")
             }
             .onAppear {
                 Task {

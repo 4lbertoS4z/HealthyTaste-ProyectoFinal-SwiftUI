@@ -18,7 +18,7 @@ struct FirstDishListView: View {
             .task {
                 await firstDishViewModel.fetchFirstDish()
             }
-            .navigationTitle("FirstDish")
+            .navigationTitle("First Dish")
             .alert(isPresented: $firstDishViewModel.showErrorMessage){
                 Alert(title: Text("Error"),
                       message: Text("Se ha producido un error. Por favor, inténtalo de nuevo más tarde."),
