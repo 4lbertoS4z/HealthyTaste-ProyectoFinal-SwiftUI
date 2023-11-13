@@ -12,12 +12,12 @@ struct ContentView: View {
                     Label("First Dish", systemImage: "fork.knife")
                 }
             
-            SecondDishListView()
+            coordinator.makeSecondDishView()
                 .tabItem {
                     Label("Second Dish", systemImage: "fork.knife")
                 }
             
-            DessertDishListView()
+            coordinator.makeDessertDishView()
                 .tabItem {
                     Label("Desserts", systemImage: "fork.knife")
                 }
@@ -31,5 +31,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    let coordinator = Coordinator(mock: false)
+    return ContentView().environmentObject(coordinator)
 }

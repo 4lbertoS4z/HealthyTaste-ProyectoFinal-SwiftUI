@@ -14,7 +14,7 @@ struct First: Codable, Identifiable {
     let image: String
     let name: String
 }
-struct Second:Codable, Identifiable{
+struct Second: Codable, Identifiable{
     let details: Details
     let id: Int
     let image: String
