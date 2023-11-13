@@ -55,6 +55,7 @@
 		60E155EC2AFCFF7700F15EB8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 60E155EB2AFCFF7700F15EB8 /* Kingfisher */; };
 		60E155EF2AFCFFA900F15EB8 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E155EE2AFCFFA900F15EB8 /* RemoteImage.swift */; };
 		60E155F32AFD033700F15EB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60E155F52AFD033700F15EB8 /* Localizable.strings */; };
+		60F15A602B029A5900BE0A9B /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F15A5F2B029A5900BE0A9B /* VideoPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,7 @@
 		60E155EE2AFCFFA900F15EB8 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		60E155F42AFD033700F15EB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		60E155F62AFD033800F15EB8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		60F15A5F2B029A5900BE0A9B /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				60E155EE2AFCFFA900F15EB8 /* RemoteImage.swift */,
+				60F15A5F2B029A5900BE0A9B /* VideoPlayer.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				6002734A2B02473D00EF6782 /* UserDefaultsDessertDishLocalService.swift in Sources */,
 				600273562B0247B000EF6782 /* MockSecondDishRemoteService.swift in Sources */,
 				60C2A6892AFBA1CE004D6E2A /* Coordinator.swift in Sources */,
+				60F15A602B029A5900BE0A9B /* VideoPlayer.swift in Sources */,
 				600273482B02471E00EF6782 /* MockDessertLocalService.swift in Sources */,
 				60C296742AF0504900C1A45C /* DessertDishListView.swift in Sources */,
 				600273422B0246DF00EF6782 /* SecondDishLocalService.swift in Sources */,
