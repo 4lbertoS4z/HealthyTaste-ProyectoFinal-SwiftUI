@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8DD96D93-3C27-4987-8DFC-64277731FA80"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Prototipo HealthyTaste/Features/SecondDishView/Second DishView/SecondDishListView.swift"
@@ -58,6 +58,21 @@
                   moduleName = "Prototipo HealthyTaste"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/albertosaz/Desktop/Prototipo%20HealthyTaste/Prototipo%20HealthyTaste/Features/SecondDishView/Second%20DishView/SecondDishListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "8DD96D93-3C27-4987-8DFC-64277731FA80 - 53bfcaa95a69476c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Prototipo_HealthyTaste.SecondDishDetailView in Prototipo_HealthyTaste.SecondDishListView.makeGoToDetailNavigationLink(for: Prototipo_HealthyTaste.Second) -&gt; some"
+                  moduleName = "Prototipo HealthyTaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertosaz/Desktop/projectos/Prototipo%20HealthyTaste/Prototipo%20HealthyTaste/Features/SecondDishView/Second%20DishView/SecondDishListView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"

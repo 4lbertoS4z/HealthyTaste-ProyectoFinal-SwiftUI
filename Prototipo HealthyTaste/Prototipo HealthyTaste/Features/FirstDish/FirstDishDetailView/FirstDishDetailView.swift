@@ -10,10 +10,13 @@ import SwiftUI
 struct FirstDishDetailView: View {
     let firstDish: First
     var body: some View {
-        VStack {
-            ScrollView{
+        ScrollView {
+            LazyVStack {
                 Text(firstDish.name)
-                    .font(.headline)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.top)
+
                 AsyncImage(url: URL(string: firstDish.image)) { state in
                     switch state {
                     case .empty:
@@ -22,28 +25,43 @@ struct FirstDishDetailView: View {
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 200, height: 200)
+                            .frame(maxWidth: UIScreen.main.bounds.width * 0.9)
                     case .failure:
                         Text("Error al cargar la imagen")
                     @unknown default:
                         EmptyView()
                     }
                 }
-                Text("Ingredientes:")
-                    .font(.title)
-                Text(firstDish.details.ingredients.description)
-                Text("Elaboración:")
-                    .font(.title)
-                Text(firstDish.details.elaboration)
+                
+
+                Section(header: Text("Ingredientes").font(.headline)) {
+                    ForEach(firstDish.details.ingredients, id: \.self) { ingredient in
+                        Text(ingredient)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.bottom, 2)
+                            
+                    }
+                }
+
+                Section(header: Text("Elaboración").font(.headline)) {
+                    Text(firstDish.details.elaboration)
+                }
+
+                Section(header: Text("Alergias").font(.headline)) {
+                    RemoteImage(url: firstDish.details.imgAllergies)
+                                       .aspectRatio(contentMode: .fill)
+                                       .frame(width: 80, height: 80)                   
+                }
+
                 if let videoID = extractYouTubeID(from: firstDish.details.urlVideo) {
                     VideoPlayer(ID: videoID)
                 } else {
                     Text("Video no disponible")
                 }
-                
             }
+            .padding()
         }
-        .navigationBarTitle("Recipe Detail", displayMode: .inline)
+        .navigationBarTitle("Detalle de la Receta", displayMode: .inline)
     }
     func extractYouTubeID(from url: String) -> String? {
             // Suponiendo que la URL es algo como "https://www.youtube.com/watch?v=VIDEOID" o "https://youtu.be/VIDEOID"

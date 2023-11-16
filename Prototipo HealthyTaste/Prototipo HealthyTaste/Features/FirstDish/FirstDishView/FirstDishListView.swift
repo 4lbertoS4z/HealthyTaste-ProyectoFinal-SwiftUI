@@ -12,10 +12,12 @@ struct FirstDishListView: View {
     
     var body: some View {
         NavigationStack{
+            
             List(firstDishViewModel.firstDishs){ firstDish in
                 makeGoToDetailNavigationLink(for: firstDish)
             }
             .task {
+                
                 await firstDishViewModel.fetchFirstDish()
             }
             .navigationTitle("First Dish")

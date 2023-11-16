@@ -7,10 +7,13 @@ struct SecondDishDetailView: View {
     
     
     var body: some View {
-        VStack {
-            ScrollView{
+        ScrollView {
+            LazyVStack {
                 Text(second.name)
-                    .font(.title)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.top)
+
                 AsyncImage(url: URL(string: second.image)) { state in
                     switch state {
                     case .empty:
@@ -19,27 +22,42 @@ struct SecondDishDetailView: View {
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 200, height: 200)
+                            .frame(maxWidth: UIScreen.main.bounds.width * 0.9)
                     case .failure:
                         Text("Error al cargar la imagen")
                     @unknown default:
                         EmptyView()
                     }
                 }
-                Text("Ingredientes:")
-                    .font(.title)
-                Text(second.details.ingredients.description)
-                Text("Elaboración:")
-                    .font(.title)
-                Text(second.details.elaboration)
+
+                Section(header: Text("Ingredientes").font(.headline)) {
+                    ForEach(second.details.ingredients, id: \.self) { ingredient in
+                        Text(ingredient)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.bottom, 2)
+                            
+                    }
+                }
+
+                Section(header: Text("Elaboración").font(.headline)) {
+                    Text(second.details.elaboration)
+                }
+
+                Section(header: Text("Alergias").font(.headline)) {
+                    RemoteImage(url: second.details.imgAllergies)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 80, height: 80)
+                }
+
                 if let videoID = extractYouTubeID(from: second.details.urlVideo) {
                     VideoPlayer(ID: videoID)
                 } else {
                     Text("Video no disponible")
                 }
             }
+            .padding()
         }
-        .navigationBarTitle("Recipe Detail", displayMode: .inline)
+        .navigationBarTitle("Detalle de la Receta", displayMode: .inline)
     }
     func extractYouTubeID(from url: String) -> String? {
             // Suponiendo que la URL es algo como "https://www.youtube.com/watch?v=VIDEOID" o "https://youtu.be/VIDEOID"
