@@ -25,6 +25,10 @@ struct ContentView: View {
                 .tabItem{
                     Label("Kcal",systemImage: "fork.knife")
                 }
+            coordinator.makeFirstDishFavoriteView()
+                .tabItem {
+                    Label("Favorites", systemImage: "star")
+                }
         }
         
     }

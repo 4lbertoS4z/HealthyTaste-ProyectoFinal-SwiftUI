@@ -28,6 +28,9 @@
 		601BE9CD2AF262580048C960 /* SecondDishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601BE9CC2AF262580048C960 /* SecondDishDetailView.swift */; };
 		601BE9CF2AF2626A0048C960 /* DessertDishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601BE9CE2AF2626A0048C960 /* DessertDishDetailView.swift */; };
 		602D0A702AF06C8000F7E6FA /* FirstDishRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602D0A6F2AF06C8000F7E6FA /* FirstDishRowView.swift */; };
+		60770BD52B07D9220005EBA8 /* FirstDishFavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60770BD42B07D9220005EBA8 /* FirstDishFavoriteViewModel.swift */; };
+		60770BD72B07D9420005EBA8 /* FirstDishFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60770BD62B07D9420005EBA8 /* FirstDishFavoriteView.swift */; };
+		60770BD92B07DDF60005EBA8 /* FirstDishDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60770BD82B07DDF60005EBA8 /* FirstDishDetailViewModel.swift */; };
 		609ED96F2AF2D0330097638C /* KcalCalculatorWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609ED96E2AF2D0330097638C /* KcalCalculatorWebView.swift */; };
 		609ED9712AF2D5430097638C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609ED9702AF2D5430097638C /* WebView.swift */; };
 		60C296582AF04CB600C1A45C /* HealthyTasteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C296572AF04CB600C1A45C /* HealthyTasteApp.swift */; };
@@ -80,6 +83,9 @@
 		601BE9CC2AF262580048C960 /* SecondDishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDishDetailView.swift; sourceTree = "<group>"; };
 		601BE9CE2AF2626A0048C960 /* DessertDishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDishDetailView.swift; sourceTree = "<group>"; };
 		602D0A6F2AF06C8000F7E6FA /* FirstDishRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDishRowView.swift; sourceTree = "<group>"; };
+		60770BD42B07D9220005EBA8 /* FirstDishFavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDishFavoriteViewModel.swift; sourceTree = "<group>"; };
+		60770BD62B07D9420005EBA8 /* FirstDishFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDishFavoriteView.swift; sourceTree = "<group>"; };
+		60770BD82B07DDF60005EBA8 /* FirstDishDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDishDetailViewModel.swift; sourceTree = "<group>"; };
 		609ED96E2AF2D0330097638C /* KcalCalculatorWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KcalCalculatorWebView.swift; sourceTree = "<group>"; };
 		609ED9702AF2D5430097638C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		60C296542AF04CB600C1A45C /* HealthyTaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyTaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,6 +223,15 @@
 			path = DessertDishDetailView;
 			sourceTree = "<group>";
 		};
+		60770BD32B07D9010005EBA8 /* FirstDishFavoriteView */ = {
+			isa = PBXGroup;
+			children = (
+				60770BD42B07D9220005EBA8 /* FirstDishFavoriteViewModel.swift */,
+				60770BD62B07D9420005EBA8 /* FirstDishFavoriteView.swift */,
+			);
+			path = FirstDishFavoriteView;
+			sourceTree = "<group>";
+		};
 		60C2964B2AF04CB600C1A45C = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +361,7 @@
 		60C2A68C2AFBA337004D6E2A /* FirstDish */ = {
 			isa = PBXGroup;
 			children = (
+				60770BD32B07D9010005EBA8 /* FirstDishFavoriteView */,
 				60C2A68D2AFBA346004D6E2A /* FirstDishDetailView */,
 				60C2A6842AFBA0F1004D6E2A /* FirstDishView */,
 			);
@@ -356,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				60C2A68E2AFBA365004D6E2A /* FirstDishDetailView.swift */,
+				60770BD82B07DDF60005EBA8 /* FirstDishDetailViewModel.swift */,
 			);
 			path = FirstDishDetailView;
 			sourceTree = "<group>";
@@ -506,6 +523,7 @@
 			files = (
 				60C2966C2AF04F0000C1A45C /* ApiConstants.swift in Sources */,
 				602D0A702AF06C8000F7E6FA /* FirstDishRowView.swift in Sources */,
+				60770BD52B07D9220005EBA8 /* FirstDishFavoriteViewModel.swift in Sources */,
 				60C2965A2AF04CB600C1A45C /* ContentView.swift in Sources */,
 				60C296582AF04CB600C1A45C /* HealthyTasteApp.swift in Sources */,
 				60E155E72AFCFB2E00F15EB8 /* MockFirstDishLocalService.swift in Sources */,
@@ -527,6 +545,7 @@
 				60C2966E2AF04FB800C1A45C /* FirstDishListView.swift in Sources */,
 				60C2A68F2AFBA365004D6E2A /* FirstDishDetailView.swift in Sources */,
 				600273542B02479A00EF6782 /* LiveDessertDishRemoteService.swift in Sources */,
+				60770BD92B07DDF60005EBA8 /* FirstDishDetailViewModel.swift in Sources */,
 				6002734A2B02473D00EF6782 /* UserDefaultsDessertDishLocalService.swift in Sources */,
 				600273562B0247B000EF6782 /* MockSecondDishRemoteService.swift in Sources */,
 				60C2A6892AFBA1CE004D6E2A /* Coordinator.swift in Sources */,
@@ -535,6 +554,7 @@
 				60C296742AF0504900C1A45C /* DessertDishListView.swift in Sources */,
 				600273422B0246DF00EF6782 /* SecondDishLocalService.swift in Sources */,
 				60C2A69C2AFBA50F004D6E2A /* URLSessionNetworkClient.swift in Sources */,
+				60770BD72B07D9420005EBA8 /* FirstDishFavoriteView.swift in Sources */,
 				6002735E2B024C6800EF6782 /* DessertDishRowView.swift in Sources */,
 				601BE9CF2AF2626A0048C960 /* DessertDishDetailView.swift in Sources */,
 				60C296722AF0503300C1A45C /* SecondDishListView.swift in Sources */,

@@ -8,7 +8,19 @@
 import SwiftUI
 
 struct FirstDishDetailView: View {
+    @EnvironmentObject var coordinator: Coordinator
+    @StateObject private var viewModel: FirstDishDetailViewModel
+    
     let firstDish: First
+    let popHandler: (() -> Void)?
+    
+    init(viewModel: FirstDishDetailViewModel, firstDish: First, popHandler: (() -> Void)? = nil) {
+        
+        _viewModel = StateObject(wrappedValue: viewModel)
+        self.firstDish = firstDish
+        self.popHandler = popHandler
+    }
+    
     var body: some View {
         ScrollView {
             LazyVStack {
@@ -62,7 +74,18 @@ struct FirstDishDetailView: View {
             .padding()
         }
         .navigationBarTitle("Detalle de la Receta", displayMode: .inline)
-    }
+                .toolbar{
+                    Button("Favorite", systemImage: viewModel.isFavorite ? "star.fill" : "star") {
+                        Task {
+                            await toggleFavoriteFirstDish(first: firstDish)                        }
+                    }
+                }
+                .onAppear {
+                    Task {
+                        await viewModel.isFavoriteFirstDish(first: firstDish)
+                    }
+                }
+            }
     func extractYouTubeID(from url: String) -> String? {
             // Suponiendo que la URL es algo como "https://www.youtube.com/watch?v=VIDEOID" o "https://youtu.be/VIDEOID"
             if let urlComponents = URLComponents(string: url),
@@ -74,6 +97,15 @@ struct FirstDishDetailView: View {
                 return url.components(separatedBy: "/").last
             }
         }
+    
+    private func toggleFavoriteFirstDish(first: First) async {
+        if viewModel.isFavorite {
+            await viewModel.removeFavoriteFirstDish(first: first)
+        } else {
+            await viewModel.addFavoriteFirstDish(first: first)
+        }
+    }
+    
     }
 
 

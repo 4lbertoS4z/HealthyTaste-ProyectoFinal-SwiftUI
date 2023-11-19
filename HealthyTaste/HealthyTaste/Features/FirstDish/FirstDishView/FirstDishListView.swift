@@ -33,7 +33,16 @@ struct FirstDishListView: View {
         NavigationLink{
             coordinator.makeFirstDishDetailView(first: first)
         } label: {
-            FirstDishRowView(first: first)
+            HStack {
+                RemoteImage(url: first.image)
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 150, height: 150)
+                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                            .shadow(color: .gray, radius: 2, x: 4, y: 10)
+                Spacer()
+                            Text(first.name)
+                Spacer()
+            }
         }
     }
 }

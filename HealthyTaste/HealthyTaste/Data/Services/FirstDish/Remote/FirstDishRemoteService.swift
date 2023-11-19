@@ -7,4 +7,5 @@
 
 protocol FirstDishRemoteService{
     func getFirstDishes() async throws ->[First]
+    func getFirstDish(id: Int) async throws -> First
 }

@@ -5,6 +5,8 @@
 //  Created by alberto saz on 13/11/23.
 //
 
+import Foundation
+
 struct SecondDishRepository{
     private let remoteService: SecondDishRemoteService
     private let localService:
