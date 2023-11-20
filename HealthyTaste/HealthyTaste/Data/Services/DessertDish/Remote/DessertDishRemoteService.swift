@@ -8,4 +8,5 @@
 
 protocol DessertDishRemoteService{
     func getDessertDishes() async throws ->[Dessert]
+    func getDessertDish(id: Int) async throws -> Dessert
 }

@@ -27,7 +27,29 @@ struct DessertDishRepository{
             return try localService.getDessertDishes()
         }
     }
+    func getDessertDish(id: Int) async throws -> Dessert {
+        return try await remoteService.getDessertDish(id: id)
+    }
     
+    func getFavoriteDessertDish() async throws -> [Dessert]{
+        return try await localService.getFavoriteDessertDish()
+    }
+    
+    func addFavoriteDessertDish(dessert: Dessert) async throws{
+        try await localService.addFavoriteDessertDish(dessert: dessert)
+    }
+    
+    func removeFavoriteDessertDish(dessert: Dessert) async throws{
+        try await localService.removeFavoriteDessertDish(dessert: dessert)
+    }
+    
+    func isFavoriteDessertDish(dessert: Dessert) async throws -> Bool{
+        return try await localService.isFavoriteDessertDish(dessert: dessert)
+    }
+    func saveFavoriteDessertDishes() async throws {
+           let favorites = try await localService.getFavoriteDessertDish()
+        try  localService.saveFavorites(favorites)
+       }
 }
 
 

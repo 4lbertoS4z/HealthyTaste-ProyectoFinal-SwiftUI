@@ -18,4 +18,5 @@ protocol FirstDishLocalService{
     
     func isFavoriteFirstDish(first: First) async throws -> Bool
     
-    func saveFavorites(_ favorites: [First]) throws}
+    func saveFavorites(_ favorites: [First]) throws
+}

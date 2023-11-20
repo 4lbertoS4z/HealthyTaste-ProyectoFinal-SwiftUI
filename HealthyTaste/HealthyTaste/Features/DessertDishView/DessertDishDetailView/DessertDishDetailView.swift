@@ -3,8 +3,19 @@
 import SwiftUI
 
 struct DessertDishDetailView: View {
+    @EnvironmentObject var coordinator: Coordinator
+    @StateObject private var viewModel: DessertDishDetailViewModel
+    
     let dessert: Dessert
-
+    let popHandler: (() -> Void)?
+    
+    init(viewModel: DessertDishDetailViewModel, dessert: Dessert, popHandler: (() -> Void)? = nil) {
+       
+        _viewModel = StateObject(wrappedValue: viewModel)
+        self.dessert = dessert
+        self.popHandler = popHandler
+    }
+    
     var body: some View {
         ScrollView {
             LazyVStack() {
@@ -57,6 +68,17 @@ struct DessertDishDetailView: View {
             .padding()
         }
         .navigationBarTitle("Detalle de la Receta", displayMode: .inline)
+        .toolbar{
+            Button("Favorite", systemImage: viewModel.isFavorite ? "star.fill" : "star") {
+                Task {
+                    await toggleFavoriteDessertDish(dessert: dessert)                        }
+            }
+        }
+        .onAppear {
+            Task {
+                await viewModel.isFavoriteDessertDish(dessert: dessert)
+            }
+        }
     }
     func extractYouTubeID(from url: String) -> String? {
             // Suponiendo que la URL es algo como "https://www.youtube.com/watch?v=VIDEOID" o "https://youtu.be/VIDEOID"
@@ -69,6 +91,15 @@ struct DessertDishDetailView: View {
                 return url.components(separatedBy: "/").last
             }
         }
+    
+    private func toggleFavoriteDessertDish(dessert: Dessert) async {
+        if viewModel.isFavorite {
+            await viewModel.removeFavoriteDessertDish(dessert: dessert)
+        } else {
+            await viewModel.addFavoriteDessertDish(dessert:dessert)
+        }
+    }
+    
 }
 
 
