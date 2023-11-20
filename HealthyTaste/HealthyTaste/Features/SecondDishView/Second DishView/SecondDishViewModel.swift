@@ -8,6 +8,7 @@ class SecondDishViewModel: ObservableObject{
     
     @Published private(set) var secondDishs = [Second]()
     @Published var showErrorMessage = false
+    
     init(secondDishRepository: SecondDishRepository) {
         self.secondDishRepository = secondDishRepository
         }

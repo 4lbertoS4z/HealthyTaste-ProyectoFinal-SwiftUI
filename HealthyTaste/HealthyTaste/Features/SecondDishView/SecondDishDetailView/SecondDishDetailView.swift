@@ -3,18 +3,28 @@
 import SwiftUI
 
 struct SecondDishDetailView: View {
-    let second: Second
+    @EnvironmentObject var coordinator: Coordinator
+    @StateObject private var viewModel: SecondDishDetailViewModel
     
+    let secondDish: Second
+    let popHandler: (() -> Void)?
+    
+    init(viewModel: SecondDishDetailViewModel, secondDish: Second, popHandler: (() -> Void)? = nil) {
+        
+        _viewModel = StateObject(wrappedValue: viewModel)
+        self.secondDish = secondDish
+        self.popHandler = popHandler
+    }
     
     var body: some View {
         ScrollView {
             LazyVStack {
-                Text(second.name)
+                Text(secondDish.name)
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.top)
 
-                AsyncImage(url: URL(string: second.image)) { state in
+                AsyncImage(url: URL(string: secondDish.image)) { state in
                     switch state {
                     case .empty:
                         ProgressView()
@@ -31,7 +41,7 @@ struct SecondDishDetailView: View {
                 }
 
                 Section(header: Text("Ingredientes").font(.headline)) {
-                    ForEach(second.details.ingredients, id: \.self) { ingredient in
+                    ForEach(secondDish.details.ingredients, id: \.self) { ingredient in
                         Text(ingredient)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.bottom, 2)
@@ -40,16 +50,16 @@ struct SecondDishDetailView: View {
                 }
 
                 Section(header: Text("Elaboración").font(.headline)) {
-                    Text(second.details.elaboration)
+                    Text(secondDish.details.elaboration)
                 }
 
                 Section(header: Text("Alergias").font(.headline)) {
-                    RemoteImage(url: second.details.imgAllergies)
+                    RemoteImage(url: secondDish.details.imgAllergies)
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 80, height: 80)
                 }
 
-                if let videoID = extractYouTubeID(from: second.details.urlVideo) {
+                if let videoID = extractYouTubeID(from: secondDish.details.urlVideo) {
                     VideoPlayer(ID: videoID)
                 } else {
                     Text("Video no disponible")
@@ -58,6 +68,17 @@ struct SecondDishDetailView: View {
             .padding()
         }
         .navigationBarTitle("Detalle de la Receta", displayMode: .inline)
+        .toolbar{
+            Button("Favorite", systemImage: viewModel.isFavorite ? "star.fill" : "star") {
+                Task {
+                    await toggleFavoriteSecondDish(second: secondDish)                        }
+            }
+        }
+        .onAppear {
+            Task {
+                await viewModel.isFavoriteSecondDish(second: secondDish)
+            }
+        }
     }
     func extractYouTubeID(from url: String) -> String? {
             // Suponiendo que la URL es algo como "https://www.youtube.com/watch?v=VIDEOID" o "https://youtu.be/VIDEOID"
@@ -70,4 +91,11 @@ struct SecondDishDetailView: View {
                 return url.components(separatedBy: "/").last
             }
         }
+    private func toggleFavoriteSecondDish(second: Second) async {
+        if viewModel.isFavorite {
+            await viewModel.removeFavoriteSecondDish(second: second)
+        } else {
+            await viewModel.addFavoriteSecondDish(second:second)
+        }
+    }
     }

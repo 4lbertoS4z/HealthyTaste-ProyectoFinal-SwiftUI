@@ -55,8 +55,11 @@ class Coordinator: ObservableObject{
         .init(secondDishRepository: secondDishRepository)
     }
     //MARK: - SecondDishDetailView
-    func makeSecondDishDetailView(second: Second) -> SecondDishDetailView{
-        .init(second: second)
+    func makeSecondDishDetailView(second: Second, popHandler: (() -> Void)? = nil) -> SecondDishDetailView{
+        return SecondDishDetailView(viewModel:makeSecondDishDetailViewModel(), secondDish: second, popHandler: popHandler)
+    }
+    func makeSecondDishFavoriteView() -> SecondDishFavoriteView{
+        return SecondDishFavoriteView(secondDishViewModel:makeSecondDishFavoriteViewModel())
     }
     // MARK: - DessertDishView
     func makeDessertDishView() -> DessertDishListView{
@@ -77,5 +80,14 @@ class Coordinator: ObservableObject{
     }
     private func makeFirstDishFavoriteViewModel() -> FirstDishFavoriteViewModel {
         return FirstDishFavoriteViewModel(firstDishRepository: firstDishRepository)
+    }
+    private func makeSecondDishFavoriteView() -> SecondDishFavoriteViewModel {
+        return SecondDishFavoriteViewModel(secondDishRepository: secondDishRepository)
+    }
+    private func makeSecondDishDetailViewModel() -> SecondDishDetailViewModel {
+        return SecondDishDetailViewModel(secondDishRepository: secondDishRepository)
+    }
+    private func makeSecondDishFavoriteViewModel() -> SecondDishFavoriteViewModel {
+        return SecondDishFavoriteViewModel(secondDishRepository: secondDishRepository)
     }
 }

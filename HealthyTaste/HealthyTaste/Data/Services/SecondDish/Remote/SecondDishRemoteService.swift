@@ -8,4 +8,5 @@
 
 protocol SecondDishRemoteService{
     func getSecondDishes() async throws ->[Second]
+    func getSecondDish(id: Int) async throws -> Second
 }

@@ -8,6 +8,8 @@
 import Foundation
 
 struct LiveSecondDishRemoteService: SecondDishRemoteService{
+    
+    
     private let networkClient: NetworkClient
     
     init(networkClient: NetworkClient) {
@@ -17,5 +19,8 @@ struct LiveSecondDishRemoteService: SecondDishRemoteService{
     func getSecondDishes() async throws -> [Second] {
         return try await networkClient.get(url: ApiConstants.secondDishUrl)
     }
-    
+    func getSecondDish(id: Int) async throws -> Second {
+        let url = "\(ApiConstants.secondDishUrl)/\(id)" // Construye la URL con el ID del plato
+        return try await networkClient.get(url: url)
+    }
 }

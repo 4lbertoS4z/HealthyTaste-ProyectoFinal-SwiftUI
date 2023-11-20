@@ -29,6 +29,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Favorites", systemImage: "star")
                 }
+            coordinator.makeSecondDishFavoriteView()
+                .tabItem {
+                    Label("Favorites 2", systemImage: "star")
+                }
         }
         
     }
