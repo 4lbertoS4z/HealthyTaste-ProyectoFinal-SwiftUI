@@ -42,9 +42,15 @@ struct FavoriteDishesView: View {
                                     await firstDishViewModel.getFavoriteFirstDishes()
                                 }
                             })
+                            .onDisappear {
+                                Task {
+                                    await firstDishViewModel.getFavoriteFirstDishes()
+                                }
+                            }
                         } label: {
                           FirstDishRowView(first: firstDish)
                         }
+                        
                     }
                 } else {
                     Text("You do not have any favorite items yet!")
@@ -58,9 +64,15 @@ struct FavoriteDishesView: View {
                                     await secondDishViewModel.getFavoriteSecondDishes()
                                 }
                             })
+                            .onDisappear {
+                                Task {
+                                    await secondDishViewModel.getFavoriteSecondDishes()
+                                }
+                            }
                         } label: {
                             SecondDishRowView(second: secondDish)
                         }
+                        
                     }
                 } else {
                     Text("You do not have any favorite items yet!")
@@ -74,9 +86,15 @@ struct FavoriteDishesView: View {
                                     await dessertDishViewModel.getFavoriteDessertDishes()
                                 }
                             })
+                            .onDisappear {
+                                Task {
+                                    await dessertDishViewModel.getFavoriteDessertDishes()
+                                }
+                            }
                         } label: {
                             DessertDishRowView(dessert: dessertDish)
                         }
+                        
                     }
                 } else {
                     Text("You do not have any favorite items yet!")
