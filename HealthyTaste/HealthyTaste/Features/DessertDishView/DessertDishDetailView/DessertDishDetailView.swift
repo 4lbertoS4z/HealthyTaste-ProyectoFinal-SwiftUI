@@ -7,13 +7,11 @@ struct DessertDishDetailView: View {
     @StateObject private var viewModel: DessertDishDetailViewModel
     
     let dessert: Dessert
-    let popHandler: (() -> Void)?
     
-    init(viewModel: DessertDishDetailViewModel, dessert: Dessert, popHandler: (() -> Void)? = nil) {
+    init(viewModel: DessertDishDetailViewModel, dessert: Dessert) {
        
         _viewModel = StateObject(wrappedValue: viewModel)
         self.dessert = dessert
-        self.popHandler = popHandler
     }
     
     var body: some View {

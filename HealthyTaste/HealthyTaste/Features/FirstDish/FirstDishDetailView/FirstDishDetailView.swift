@@ -12,13 +12,11 @@ struct FirstDishDetailView: View {
     @StateObject private var viewModel: FirstDishDetailViewModel
     
     let firstDish: First
-    let popHandler: (() -> Void)?
     
-    init(viewModel: FirstDishDetailViewModel, firstDish: First, popHandler: (() -> Void)? = nil) {
+    init(viewModel: FirstDishDetailViewModel, firstDish: First) {
         
         _viewModel = StateObject(wrappedValue: viewModel)
         self.firstDish = firstDish
-        self.popHandler = popHandler
     }
     
     var body: some View {
