@@ -9,25 +9,25 @@ struct ContentView: View {
         TabView {
             coordinator.makeFirstDishView()
                 .tabItem {
-                    Label("First Dish", systemImage: "fork.knife")
+                    Image("firstDish")
                 }
             
             coordinator.makeSecondDishView()
                 .tabItem {
-                    Label("Second Dish", systemImage: "fork.knife")
+                    Image("secondDish")
                 }
             
             coordinator.makeDessertDishView()
                 .tabItem {
-                    Label("Desserts", systemImage: "fork.knife")
+                    Image("dessertDish")
                 }
             KcalCalculatorWebView()
                 .tabItem{
-                    Label("Kcal",systemImage: "fork.knife")
+                    Image("kCal")
                 }
             coordinator.makeFavoriteDishesView()
                 .tabItem {
-                    Label("Favorites", systemImage: "star")
+                    Image("star")
                 }
             
         }

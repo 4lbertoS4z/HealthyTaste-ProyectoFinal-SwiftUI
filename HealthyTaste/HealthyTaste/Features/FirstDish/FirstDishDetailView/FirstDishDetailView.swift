@@ -37,14 +37,14 @@ struct FirstDishDetailView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(maxWidth: UIScreen.main.bounds.width * 0.9)
                     case .failure:
-                        Text("Error al cargar la imagen")
+                        Text("Error loading the image.")
                     @unknown default:
                         EmptyView()
                     }
                 }
                 
 
-                Section(header: Text("Ingredientes").font(.headline)) {
+                Section(header: Text("Ingredients").font(.headline)) {
                     ForEach(firstDish.details.ingredients, id: \.self) { ingredient in
                         Text(ingredient)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -53,11 +53,11 @@ struct FirstDishDetailView: View {
                     }
                 }
 
-                Section(header: Text("Elaboración").font(.headline)) {
+                Section(header: Text("Elaboration").font(.headline)) {
                     Text(firstDish.details.elaboration)
                 }
 
-                Section(header: Text("Alergias").font(.headline)) {
+                Section(header: Text("Allergies").font(.headline)) {
                     RemoteImage(url: firstDish.details.imgAllergies)
                                        .aspectRatio(contentMode: .fill)
                                        .frame(width: 80, height: 80)                   
@@ -66,12 +66,12 @@ struct FirstDishDetailView: View {
                 if let videoID = extractYouTubeID(from: firstDish.details.urlVideo) {
                     VideoPlayer(ID: videoID)
                 } else {
-                    Text("Video no disponible")
+                    Text("Video not available")
                 }
             }
             .padding()
         }
-        .navigationBarTitle("Detalle de la Receta", displayMode: .inline)
+        .navigationBarTitle("Recipe Details", displayMode: .inline)
                 .toolbar{
                     Button("Favorite", systemImage: viewModel.isFavorite ? "star.fill" : "star") {
                         Task {

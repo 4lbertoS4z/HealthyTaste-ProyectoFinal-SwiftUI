@@ -16,10 +16,10 @@ struct DessertDishListView: View {
             .task {
                 await dessertDishViewModel.fetchDessertDish()
             }
-            .navigationTitle("Dessert Dish")
+            .navigationTitle("Desserts")
             .alert(isPresented: $dessertDishViewModel.showErrorMessage){
                 Alert(title: Text("Error"),
-                      message: Text("Se ha producido un error. Por favor, inténtalo de nuevo más tarde."),
+                      message: Text("An error has occurred. Please try again later."),
                       dismissButton: .cancel()
                 )
             }

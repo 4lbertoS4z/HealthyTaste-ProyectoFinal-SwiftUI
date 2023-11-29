@@ -62,6 +62,7 @@
 		60E155EC2AFCFF7700F15EB8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 60E155EB2AFCFF7700F15EB8 /* Kingfisher */; };
 		60E155EF2AFCFFA900F15EB8 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E155EE2AFCFFA900F15EB8 /* RemoteImage.swift */; };
 		60E155F32AFD033700F15EB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60E155F52AFD033700F15EB8 /* Localizable.strings */; };
+		60EA19C72B17DC630030B0C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EA19C62B17DC630030B0C9 /* LaunchScreen.storyboard */; };
 		60F15A602B029A5900BE0A9B /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F15A5F2B029A5900BE0A9B /* VideoPlayer.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,9 @@
 		604C5B0D2B0BE879000A18CD /* SecondDishFavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDishFavoriteViewModel.swift; sourceTree = "<group>"; };
 		604C5B122B0BF4DC000A18CD /* DessertDishFavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDishFavoriteViewModel.swift; sourceTree = "<group>"; };
 		604C5B182B0BF561000A18CD /* DessertDishDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDishDetailViewModel.swift; sourceTree = "<group>"; };
+		606CAF7D2B17F1800078B628 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		606CAF7E2B17F1E80078B628 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		606CAF7F2B17F2160078B628 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		60770BD42B07D9220005EBA8 /* FirstDishFavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDishFavoriteViewModel.swift; sourceTree = "<group>"; };
 		60770BD62B07D9420005EBA8 /* FavoriteDishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDishesView.swift; sourceTree = "<group>"; };
 		60770BD82B07DDF60005EBA8 /* FirstDishDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDishDetailViewModel.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 		60E155EE2AFCFFA900F15EB8 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		60E155F42AFD033700F15EB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		60E155F62AFD033800F15EB8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		60EA19C62B17DC630030B0C9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60F15A5F2B029A5900BE0A9B /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,7 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				60770BD42B07D9220005EBA8 /* FirstDishFavoriteViewModel.swift */,
-				60770BD62B07D9420005EBA8 /* FavoriteDishesView.swift */,
 			);
 			path = FirstDishFavoriteView;
 			sourceTree = "<group>";
@@ -289,6 +293,7 @@
 				60C2A6882AFBA1CE004D6E2A /* Coordinator.swift */,
 				60C2965B2AF04CB800C1A45C /* Assets.xcassets */,
 				60C2965D2AF04CB800C1A45C /* Preview Content */,
+				60EA19C62B17DC630030B0C9 /* LaunchScreen.storyboard */,
 			);
 			path = HealthyTaste;
 			sourceTree = "<group>";
@@ -320,11 +325,11 @@
 		60C2A6832AFBA0E4004D6E2A /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				60E222F72B0CD62E000CFE9F /* FavoriteDishes */,
 				60C2A68C2AFBA337004D6E2A /* FirstDish */,
-				60C2A6872AFBA158004D6E2A /* KcalCalculatorView */,
-				60C2A6862AFBA114004D6E2A /* DessertDishView */,
 				60C2A6852AFBA102004D6E2A /* SecondDishView */,
+				60C2A6862AFBA114004D6E2A /* DessertDishView */,
+				60E222F72B0CD62E000CFE9F /* FavoriteDishes */,
+				60C2A6872AFBA158004D6E2A /* KcalCalculatorView */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -351,8 +356,8 @@
 		60C2A6862AFBA114004D6E2A /* DessertDishView */ = {
 			isa = PBXGroup;
 			children = (
-				6002735C2B024ACC00EF6782 /* DessertDishDetailView */,
 				6002735B2B024ABF00EF6782 /* DessertDishView */,
+				6002735C2B024ACC00EF6782 /* DessertDishDetailView */,
 			);
 			path = DessertDishView;
 			sourceTree = "<group>";
@@ -472,6 +477,7 @@
 		60E222F72B0CD62E000CFE9F /* FavoriteDishes */ = {
 			isa = PBXGroup;
 			children = (
+				60770BD62B07D9420005EBA8 /* FavoriteDishesView.swift */,
 				604C5B0C2B0BE83E000A18CD /* SecondDishFavoriteView */,
 				604C5B112B0BF4B0000A18CD /* DessertDishFavoriteView */,
 				60770BD32B07D9010005EBA8 /* FirstDishFavoriteView */,
@@ -525,6 +531,9 @@
 				en,
 				Base,
 				es,
+				fr,
+				de,
+				it,
 			);
 			mainGroup = 60C2964B2AF04CB600C1A45C;
 			packageReferences = (
@@ -545,6 +554,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60C2965F2AF04CB800C1A45C /* Preview Assets.xcassets in Resources */,
+				60EA19C72B17DC630030B0C9 /* LaunchScreen.storyboard in Resources */,
 				60E155F32AFD033700F15EB8 /* Localizable.strings in Resources */,
 				60C2965C2AF04CB800C1A45C /* Assets.xcassets in Resources */,
 			);
@@ -620,6 +630,9 @@
 			children = (
 				60E155F42AFD033700F15EB8 /* en */,
 				60E155F62AFD033800F15EB8 /* es */,
+				606CAF7D2B17F1800078B628 /* fr */,
+				606CAF7E2B17F1E80078B628 /* de */,
+				606CAF7F2B17F2160078B628 /* it */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -760,6 +773,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -789,6 +803,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -23,7 +23,7 @@ struct FirstDishListView: View {
             .navigationTitle("First Dish")
             .alert(isPresented: $firstDishViewModel.showErrorMessage){
                 Alert(title: Text("Error"),
-                      message: Text("Se ha producido un error. Por favor, inténtalo de nuevo más tarde."),
+                      message: Text("An error has occurred. Please try again later."),
                       dismissButton: .cancel()
                 )
             }
