@@ -7,7 +7,8 @@ struct HealthyTasteApp: App {
     var coordinator = Coordinator()
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(coordinator)
+          //  ContentView().environmentObject(coordinator)
+            SplashScreenView()
         }
     }
 }

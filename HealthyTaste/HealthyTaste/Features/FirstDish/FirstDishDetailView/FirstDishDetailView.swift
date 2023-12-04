@@ -26,7 +26,7 @@ struct FirstDishDetailView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.top)
-
+                
                 AsyncImage(url: URL(string: firstDish.image)) { state in
                     switch state {
                     case .empty:
@@ -43,33 +43,36 @@ struct FirstDishDetailView: View {
                     }
                 }
                 
-
-                Section(header: Text("Ingredients").font(.headline)) {
+                
+                Section(header: Text("Ingredients").font(.headline).padding(10)) {
                     ForEach(firstDish.details.ingredients, id: \.self) { ingredient in
                         Text(ingredient)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.bottom, 2)
-                            
+                            .padding(.leading, 10)
+                        
                     }
                 }
-
+                
                 Section(header: Text("Elaboration").font(.headline)) {
                     Text(firstDish.details.elaboration)
                 }
-
+                .padding(10)
                 Section(header: Text("Allergies").font(.headline)) {
                     RemoteImage(url: firstDish.details.imgAllergies)
-                                       .aspectRatio(contentMode: .fill)
-                                       .frame(width: 80, height: 80)                   
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 80, height: 80)
                 }
-
-                if let videoID = extractYouTubeID(from: firstDish.details.urlVideo) {
-                    VideoPlayer(ID: videoID)
-                } else {
-                    Text("Video not available")
+                .padding(10)
+                Section(header:Text("Video").font(.headline).padding(10)){
+                    if let videoID = extractYouTubeID(from: firstDish.details.urlVideo) {
+                        VideoPlayer(ID: videoID)
+                    } else {
+                        Text("Video not available")
+                    }
                 }
+                .padding(10)
             }
-            .padding()
+            
         }
         .navigationBarTitle("Recipe Details", displayMode: .inline)
                 .toolbar{

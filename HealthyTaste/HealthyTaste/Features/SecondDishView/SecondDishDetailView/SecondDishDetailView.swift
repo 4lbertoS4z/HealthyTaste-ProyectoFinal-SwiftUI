@@ -21,7 +21,7 @@ struct SecondDishDetailView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.top)
-
+                
                 AsyncImage(url: URL(string: secondDish.image)) { state in
                     switch state {
                     case .empty:
@@ -37,33 +37,36 @@ struct SecondDishDetailView: View {
                         EmptyView()
                     }
                 }
-
-                Section(header: Text("Ingredients").font(.headline)) {
+                
+                Section(header: Text("Ingredients").font(.headline).padding(10)) {
                     ForEach(secondDish.details.ingredients, id: \.self) { ingredient in
                         Text(ingredient)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.bottom, 2)
-                            
+                            .padding(.leading, 10)
+                        
                     }
                 }
-
+                
                 Section(header: Text("Elaboration").font(.headline)) {
                     Text(secondDish.details.elaboration)
                 }
-
+                .padding(10)
                 Section(header: Text("Allergies").font(.headline)) {
                     RemoteImage(url: secondDish.details.imgAllergies)
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 80, height: 80)
                 }
-
-                if let videoID = extractYouTubeID(from: secondDish.details.urlVideo) {
-                    VideoPlayer(ID: videoID)
-                } else {
-                    Text("video not available")
+                .padding(10)
+                Section(header:Text("Video").font(.headline).padding(10)){
+                    if let videoID = extractYouTubeID(from: secondDish.details.urlVideo) {
+                        VideoPlayer(ID: videoID)
+                    } else {
+                        Text("video not available")
+                    }
                 }
+                .padding(10)
             }
-            .padding()
+            
         }
         .navigationBarTitle("Recipe Details", displayMode: .inline)
         .toolbar{
