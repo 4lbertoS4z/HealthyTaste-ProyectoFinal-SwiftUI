@@ -1,0 +1,21 @@
+/*
+  Localizable.strings
+  Prototipo HealthyTaste
+
+  Created by alberto saz on 9/11/23.
+*/
+
+"First Dish" = "Premier Plat";
+"Second Dish" = "Deuxième Plat";
+"Desserts" = "Desserts";
+"Recipe Detail" = "Détail de la Recette";
+"An error has occurred. Please try again later." = "Une erreur s'est produite. Veuillez réessayer plus tard.";
+"Error loading the image." = "Erreur de chargement de l'image.";
+"Ingredients" = "Ingrédients";
+"Elaboration" = "Élaboration";
+"Allergies" = "Allergies";
+"Video not available" = "Vidéo non disponible";
+"Recipe Details" = "Détails de la Recette";
+"Select a Category" = "Sélectionnez une Catégorie";
+"You do not have any favorite items yet!" = "Vous n'avez pas encore d'articles favoris!";
+"Video" = "Vidéo";
